@@ -1,0 +1,4 @@
+Este projeto tem como objetivo mostrar a degradação do modelo de previsão em fluxos dados dinamicos que apresentam mudança de conceito
+
+Este pacote possui o método que detecta mudança por meio do comportamento do algoritmo
+
