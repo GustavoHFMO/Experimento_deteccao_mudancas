@@ -93,13 +93,13 @@ def main():
                     [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao] = alg_cpt.Executar(grafico=False)
                     tabela.Adicionar_Sheet_Linha(0, execucao, [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao])
                     
-                    #alg_s = Algoritmo_sensores(dataset, qtd_train_inicial, tamanho_janela, passo, lags, qtd_neuronios, numero_particulas, qtd_sensores)
-                    #[falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao] = alg_s.Executar(grafico=False)
-                    #tabela.Adicionar_Sheet_Linha(1, execucao, [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao])
+                    alg_s = Algoritmo_sensores(dataset, qtd_train_inicial, tamanho_janela, passo, lags, qtd_neuronios, numero_particulas, qtd_sensores)
+                    [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao] = alg_s.Executar(grafico=False)
+                    tabela.Adicionar_Sheet_Linha(1, execucao, [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao])
                     
-                    #alg_cpt_s = Algoritmo_comportamento_sensor(dataset, qtd_train_inicial, tamanho_janela, passo, lags, qtd_neuronios, numero_particulas, n_particulas_comportamento, qtd_sensores, limite)
-                    #[falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao] = alg_cpt_s.Executar(grafico=False)
-                    #tabela.Adicionar_Sheet_Linha(2, execucao, [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao])
+                    alg_cpt_s = Algoritmo_comportamento_sensor(dataset, qtd_train_inicial, tamanho_janela, passo, lags, qtd_neuronios, numero_particulas, n_particulas_comportamento, qtd_sensores, limite)
+                    [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao] = alg_cpt_s.Executar(grafico=False)
+                    tabela.Adicionar_Sheet_Linha(2, execucao, [falsos_alarmes, atrasos, falta_deteccao, MAPE, tempo_execucao])
                     ##################################################################################################################################################
                         
                 tabela.Calcular_Medias(qtd_execucoes)
